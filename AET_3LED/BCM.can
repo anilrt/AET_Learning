@@ -1,0 +1,19 @@
+/*@!Encoding:1252*/
+includes
+{
+  
+}
+
+variables
+{
+  message BCM_Message b;
+}
+
+//on envVar Env_BCM
+on sysvar Indicator::Sys_BCM
+{
+  //b.BCM_Signal = getValue(this);//getValue(Env_BCM);
+  b.BCM_Signal = @Indicator::Sys_BCM;
+  output(b);
+}
+
